@@ -1,0 +1,6 @@
+def write_fasta(seqs, filename):
+    """{이름: 서열} 딕셔너리를 FASTA 파일로 저장한다."""
+    with open(filename, "w") as out:
+        for name in seqs:
+            out.write(">" + name + "\n")
+            out.write(seqs[name] + "\n")
